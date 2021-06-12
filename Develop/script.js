@@ -10,7 +10,7 @@ numeric=[1,2,3,4,5,6,7,8,9,0]
 //special charcters
 s_Char=["!","@", "#","$","%","^","&","*","(",")","~","/","+","_"]
 //New password array
-
+newPass=[]
 
 
 // Write password to the #password input
@@ -34,12 +34,31 @@ var askLength=prompt("What is the length of the password")
   }
 //Serires of confirms for character types
 var lCase=confirm("Do you want lowercase characters?")
+  if(lCase) {
+     newPass=newPass.concat(l_Alpha)
+     console.log(newPass)
+  
+  }
 
 var uCase=confirm("Do you want uppercase characters?")
+if(uCase) {
+  newPass=newPass.concat(C_Alpha)
+  console.log(newPass)
+ 
+}
 
 var num=confirm("Do you want numbers?")
+if(lCase) {
+  newPass=newPass.concat(numeric)
+  console.log(newPass)
 
-var SCase=confirm("Do you want special characters?")
+}
+
+var sCase=confirm("Do you want special characters?")
+if(lCase) {
+  newPass=newPass.concat(s_Char)
+  console.log(newPass)
+}
 
 }
 
