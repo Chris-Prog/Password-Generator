@@ -9,6 +9,8 @@ C_Alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
 numeric=[1,2,3,4,5,6,7,8,9,0]
 //special charcters
 s_Char=["!","@", "#","$","%","^","&","*","(",")","~","/","+","_"]
+//New password array
+
 
 
 // Write password to the #password input
@@ -24,7 +26,21 @@ function writePassword() {
 
 // Returns final result for password
 function generatePassword() {
-  
+  //Prompt for the length of the password
+var askLength=prompt("What is the length of the password")
+    askLength=parseInt(askLength)
+  if(askLength < 8 || askLength > 128) {
+    return alert("Put a number lower than 8 or higher than 128")
+  }
+//Serires of confirms for character types
+var lCase=confirm("Do you want lowercase characters?")
+
+var uCase=confirm("Do you want uppercase characters?")
+
+var num=confirm("Do you want numbers?")
+
+var SCase=confirm("Do you want special characters?")
+
 }
 
 
