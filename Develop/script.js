@@ -2,15 +2,15 @@
 var generateBtn = document.querySelector("#generate");
 
 //LowerCase Array
-l_Alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','w','z']
+var l_Alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','w','z']
 //UpperCase Array
-C_Alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+var C_Alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 // Numbers Array
-numeric=[1,2,3,4,5,6,7,8,9,0]
+var numeric=[1,2,3,4,5,6,7,8,9,0]
 //special charcters
-s_Char=["!","@", "#","$","%","^","&","*","(",")","~","/","+","_"]
+var s_Char=["!","@", "#","$","%","^","&","*","(",")","~","/","+","_"]
 //New password array
-newPass=[]
+var newPass=[]
 
 
 // Write password to the #password input
@@ -59,7 +59,17 @@ if(lCase) {
   newPass=newPass.concat(s_Char)
   console.log(newPass)
 }
+//  if nothing is confirmed condition
+if(!num && !lCase && !sCase && !uCase ) {
+  alert("You must choose at least one!")
+}
+var finishedPassword=""
 
+for(var i=0;i<length;i++){
+  var randomIndex=Math.floor(Math.random()*newPass.length)
+  finishedPassword+=newPass[randomIndex]
+}
+return finishedPassword
 }
 
 
