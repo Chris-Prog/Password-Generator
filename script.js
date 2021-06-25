@@ -6,7 +6,7 @@ var l_Alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','
 //UpperCase Array
 var C_Alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 // Numbers Array
-var numeric=[1,2,3,4,5,6,7,8,9,0]
+var numeric=['1','2','3','4','5','6','7','8','9','0']
 //special charcters
 var s_Char=["!","@", "#","$","%","^","&","*","(",")","~","/","+","_"]
 //New password array
@@ -68,9 +68,9 @@ var finishedPassword=""
 for(var i=0;i<length;i++){
   var randomIndex=Math.floor(Math.random()*newPass.length)
   finishedPassword+=newPass[randomIndex]
-  return finishedPassword
+  
 }
-
+return finishedPassword
 }
 
 
