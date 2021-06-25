@@ -68,8 +68,9 @@ var finishedPassword=""
 for(var i=0;i<length;i++){
   var randomIndex=Math.floor(Math.random()*newPass.length)
   finishedPassword+=newPass[randomIndex]
+  return finishedPassword
 }
-return finishedPassword
+
 }
 
 
